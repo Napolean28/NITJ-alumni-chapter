@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="./css/userregistration.css">
+      <title>Verify Email</title>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   </head>
+   <body>
+      <div class="container">
+         <div id="headDiv">
+            <img src="./images/nitjlogo.png" alt="NITJ" id="logo">
+            <span><b>Dr. B. R. Ambedkar National Institue of Technology</b><br>Jalandhar, Punjab</span>
+        </div>
+
+         <!-- <h1 id="h1">Verify Email</h1> -->
+         <h4>Verify Email</h4>
+         <div class="mainOption">
+            <form action="/verify" method="post">
+               <label for="OTP">Enter the OTP sent to ${req.body.emailId}</label>
+               <br><br>
+               <input type="hidden" name="emailId" value="${req.body.emailId}">
+               <input type="hidden" name="FirstName" value="${req.body.FirstName}">
+               <input type="hidden" name="LastName" value="${req.body.LastName}">
+               <input type="number" name="OTP" id="OTP" placeholder="OTP">
+               <input class="p3" type="submit" name="signupButton" value="Done" >
+            </form>
+         </div>
+      </div>
+   </body>
+</html>

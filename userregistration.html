@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/userregistration.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+    <title>Register</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!-- JS FILE TO VALIDATE FORM DATA BEFORE SUBMISSION --> 
+    <script src="./js/formdata.js"></script>
+  </head>
+  <body onload="setFormdefaults()">
+    <div class="loaderContainer">
+      <img src="./images/refresh-arrow.png" alt="Loading">
+    </div>
+    <div class="container">
+        <div id="headDiv">
+            <img src="./images/nitjlogo.png" alt="NITJ" id="logo">
+            <span><b>Dr. B. R. Ambedkar National Institue of Technology</b><br>Jalandhar, Punjab</span>
+        </div>
+        <center>
+        <h4>CSE Alumni Registration Portal</h4>
+        <div class="mainOption">
+          <form action="/register" method="post" id="userProfile">
+              <input type="text" name="FirstName" placeholder="First Name" autofocus required>
+              <input type="text" name="LastName" placeholder="Last Name">
+              <input type="email" name="emailId" placeholder="E-mail" required>
+              <input type="hidden" name="verifiedusing" value="email">
+              <input class="p1" type="password" name="password" placeholder="Password" required>
+              <input class="p2" type="password" name="confirmPassword" placeholder="Retype-Password" required>
+              <input  class="p3" type="button" name="signupButton" value="Next" onclick="valdiateForm()">
+              <input type="submit" value="submit" hidden style="display: none">
+          </form>
+          <p></p>
+        </div>
+      </center>
+      <center>
+      <h4>Or use</h4>
+      <div class="otherOptions">    
+          <!-- LINKEDIN SIGN IN BUTTON -->
+          <div>
+            <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81c6q3q3tm74fi&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&scope=r_liteprofile%20r_emailaddress">
+            <img style="width: 225px;" src="./images/Sign-In-Small---Default.png" alt="">
+          </a> 
+          </div>
+             
+          <!-- GOOGLE SIGNIN BUTTON -->
+          <a href="https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&prompt=consent&response_type=code&client_id=293949097764-jvc3modf387ppldre67vmhd4kcf7li2n.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=offline">
+            <img src="./images/btn_google_signin_light_normal_web.png" alt="SignInUsingGoogle">
+          </a>   
+        
+        </div>
+        
+          
+      </center>
+    </div>
+
+    
+  </body>
+      <!-- GOOGLE INCLUDE FILES FOR GOOGLE SIGN UP -->
+      <script src="./js/googleuser.js"></script>
+      <!-- GOOGLE REQUIRED FILES END HERE -->
+  
+      <!-- LINKEDIN JS FILE -->
+      <script src="./js/linkedinuser.js"></script>
+      <!-- END OF LINKEDIN REQUIRED FILES -->
+</html>
+

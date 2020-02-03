@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="./css/userregistration.css">
+      <title>Personal Details</title>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   </head>
+   <body>
+      <div class="container">
+            <div id="headDiv">
+                  <img src="./images/nitjlogo.png" alt="NITJ" id="logo">
+                  <span><b>Dr. B. R. Ambedkar National Institue of Technology</b><br>Jalandhar, Punjab</span>
+              </div>
+
+              <!-- <center> -->
+               <h4>Personal Details</h4> 
+               <div class="mainOption">
+                  <form action="/details" method="post">
+                     <input type="hidden" name="emailId" value="${req.body.emailId}">
+                     <input type="hidden" name="FirstName" value="${req.body.FirstName}">
+                     <input type="hidden" name="LastName" value="${req.body.LastName}">
+                     <select name="course" id="course" required>
+                        <option value="" disabled selected hidden>Course</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="mtech">M.Tech</option>
+                        <option value="phd">Ph.D.</option>
+                     </select>
+                     <input type="text" name="year" placeholder="Year of Passing" required>
+                     <input type="text" name="workingat" placeholder="Working At: " required>
+                     <input type="text" name="designation" placeholder="Working As: " required>
+                     <select name="gender" id="gender" required>
+                        <option value="" disabled selected hidden>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                     </select>
+                     <input class="p3" type="submit" name="signupButton" value="Submit" >
+                  </form>
+               </div>   
+              <!-- </center> -->
+         <!-- <h1 id="h1">Personal Details</h1> -->
+      </div>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="./css/userregistration.css">
+      <title>Thankyou</title>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   </head>
+   <body>
+      <div class="container">
+            <div id="headDiv">
+                  <img src="./images/nitjlogo.png" alt="NITJ" id="logo">
+                  <span><b>Dr. B. R. Ambedkar National Institue of Technology</b><br>Jalandhar, Punjab</span>
+              </div>
+                <h4>
+                Dear ${req.body.FirstName} ${req.body.LastName}<br>
+                </h4>
+                Thankyou for registering with NITJ CSE Alumni Chapter<br>
+                You will be notified via email of any upcoming events.
+                
+      </div>
+   </body>
+</html>
