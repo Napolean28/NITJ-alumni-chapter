@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html {
+	margin: 0;
+	top: 0px;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	top: 0;
+	/* background-image: url('../images/nitjGate.jpeg'); */
+	background: linear-gradient(90deg, #DA4453, #89216B);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.container {
+	background: white;
+	/* opacity: 0.7; */
+    /* margin-top: 2%; */
+	/* width: 600px; */
+	/* display: inline-block; */
+    /* height: inherit; */
+    /* padding: 0px 0px 10px 0px; */
+	box-sizing: border-box;
+	/* margin-left: 100px; */
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+	padding: 2%;
+	border-radius: 5px;
+	max-width: 600px;
+}
+
+
+/* .container:hover {
+	background-color: white;
+} */
+
+.container:hover #h1 {
+	color: black;
+	font-weight: bolder;
+	text-shadow: none;
+}
+
+
+
+.container #headDiv{
+	display: flex;
+	/* padding-left: 2%; */
+}
+
+#headDiv span{
+	padding: 3%;
+}
+
+.container #logo{
+	width: 15%;
+	display: inline;
+}
+
+#h1 {
+	color: white;
+	text-shadow: 2px 2px 8px black;
+}
+
+.container .mainOption{
+	padding: 1%;
+}
+
+.mainOption p{
+	color: red;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"]{
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 5px;
+	width: 49%;
+	height: 32px;
+	outline: none;
+	border: none;
+	/* font-family: sans-serif; */
+	/* font-weight: 400px; */
+	font-size: 15px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+input[type="email"]{
+	display: block;
+	width: 98%;
+}
+
+/* select::-ms-expand {
+    display: none;
+} */
+
+select:invalid { color: gray; }
+
+input[type="submit"],
+input[type="button"] {
+	display: block;
+	outline: none;
+	border: none;
+	padding: 7px;
+	width: 20%;
+	background: #f44336;
+	color: #fff;
+	/* font-weight: bold; */
+	font-size: 1.2rem;
+	border-radius: 2px;
+	/* font-family: sans-serif; */
+	transition: 0.2s ease;
+	cursor: pointer;
+	
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus {
+	background: #ff5722;
+	transition: 0.2s ease;
+}
+
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+select{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+	text-overflow: '';
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 5px;
+	width: 49%;
+	height: 32px;
+	outline: none;
+	border: none;
+	/* font-family: sans-serif; */
+	/* font-weight: 400px; */
+	font-size: 15px;
+	margin-bottom: 20px;	
+	border-bottom: 1px solid black;
+}
+
+.loaderContainer{
+	position: absolute;
+	width: 98%;
+	height: 98%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.loaderContainer img{
+	width: 7%;
+	-webkit-animation: rotateLoader infinite 2s;
+	animation: rotateLoader infinite 2s;
+}
+
+
+@-webkit-keyframes rotateLoader{
+	from{transform: rotate(0deg)}
+	to{transform: rotate(360deg)}
+}
+
+@keyframes rotateLoader{
+	from{transform: rotate(0deg)}
+	to{transform: rotate(360deg)}
+}
